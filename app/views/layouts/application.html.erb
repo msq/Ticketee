@@ -43,6 +43,10 @@
             <%= link_to "Sign In", new_user_session_path %>
           </li>
         <% end %>
+
+        <% admins_only do %>
+          <li><%= link_to "Admin", admin_root_path %></li>
+        <% end %>
         <% if user_signed_in? %>
           <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
           <p class="navbar-text">

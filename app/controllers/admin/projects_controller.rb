@@ -24,8 +24,7 @@ class Admin::ProjectsController < Admin::ApplicationController
 	end
 
 	private
-
-	def project_params
-		params.require(:project).permit(:name, :description)
-	end
+		def project_params
+			params.require(:project).permit(:name, :description)
+		end
 end
